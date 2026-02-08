@@ -6,21 +6,39 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate:content": "tsx scripts/migrate-content.ts",
+    "migrate:images": "tsx scripts/migrate-images.ts",
+    "migrate:all": "npm run migrate:content && npm run migrate:images",
+    "fix:image-links": "tsx scripts/fix-image-links.ts",
+    "list:unlinked-images": "tsx scripts/list-unlinked-images.ts"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "@heroicons/react": "^2.2.0",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.95.3",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.2.4",
+    "mapbox-gl": "^3.18.1",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "sharp": "^0.34.5",
+    "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
+    "@ducanh2912/next-pwa": "^10.2.9",
     "@tailwindcss/postcss": "^4",
+    "@types/cheerio": "^0.22.35",
+    "@types/mapbox-gl": "^3.4.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }
