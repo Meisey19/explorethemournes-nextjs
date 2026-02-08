@@ -9,7 +9,8 @@
     "lint": "eslint",
     "migrate:content": "tsx scripts/migrate-content.ts",
     "migrate:images": "tsx scripts/migrate-images.ts",
-    "migrate:all": "npm run migrate:content && npm run migrate:images",
+    "migrate:activities-places": "tsx scripts/migrate-activities-places.ts",
+    "migrate:all": "npm run migrate:content && npm run migrate:images && npm run migrate:activities-places",
     "fix:image-links": "tsx scripts/fix-image-links.ts",
     "list:unlinked-images": "tsx scripts/list-unlinked-images.ts"
   },
